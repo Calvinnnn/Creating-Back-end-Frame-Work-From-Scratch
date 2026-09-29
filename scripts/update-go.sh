@@ -7,3 +7,7 @@ fi
 
 # go version
 version="$1"
+
+url="https://go.dev/dl/go$version.linux-amd64.tar.gz"
+
+download_dir="/tmp"
