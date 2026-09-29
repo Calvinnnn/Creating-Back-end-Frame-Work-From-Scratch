@@ -13,3 +13,10 @@ url="https://go.dev/dl/go$version.linux-amd64.tar.gz"
 download_dir="/tmp"
 
 mkdir -p $download_dir
+
+echo "Downloading url..."
+if ! curl -o "$download_dir/go$version.linux-amd64.tar.gz" -L "$url" ; then
+    echo "Failed to download file"
+    exit 1
+    
+fi
