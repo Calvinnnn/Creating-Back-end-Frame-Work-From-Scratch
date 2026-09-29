@@ -26,4 +26,14 @@ echo "Removing perviouse go version..."
 
 sudo rm -rf /usr/local/go
 
+echo "Extracting go new version"
 
+sudo tar -C /usr/local -xzf "$download_dir/go$version.linux-amd64.tar.gz"
+
+
+if [ $? -eq 0 ]; then
+  echo "Go $version has been successfully installed."
+else
+  echo "Failed to install Go. Please check the download and extraction process."
+  exit 1
+fi
