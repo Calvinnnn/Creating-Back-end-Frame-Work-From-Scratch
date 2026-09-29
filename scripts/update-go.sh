@@ -18,5 +18,12 @@ echo "Downloading url..."
 if ! curl -o "$download_dir/go$version.linux-amd64.tar.gz" -L "$url" ; then
     echo "Failed to download file"
     exit 1
-    
+
 fi
+
+
+echo "Removing perviouse go version..."
+
+sudo rm -rf /usr/local/go
+
+
